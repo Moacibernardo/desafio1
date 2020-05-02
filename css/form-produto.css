@@ -1,0 +1,39 @@
+#form-produto {
+    min-width: 440px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#form-produto label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#form-produto input {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#form-produto label img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+#form-produto label div {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}

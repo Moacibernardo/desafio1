@@ -1,0 +1,88 @@
+#form-usuario {
+    min-width: 440px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#form-usuario label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#form-usuario input {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#form-usuario label img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+#form-usuario label div {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#form-usuario label input[type=file] {
+    display: none;
+}
+
+#form-usuario .controles {
+    display: flex;
+}
+
+#form-usuario .controles button[type=reset] {
+    width: 30%;
+    margin-right: 10px;
+}
+
+#form-usuario .controles button[type=submit] {
+    flex-grow: 1;
+}
+
+@media(min-width:480px) {
+    #form-usuario {
+        width: 480px;
+        margin: calc((100vw - 480px) / 10) auto;
+    }
+}
+
+@media(min-width:960px) {
+    #form-usuario {
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #form-usuario label {
+        width: calc((100% - 20px) / 2);
+    }
+    #form-usuario .controles {
+        width: calc((100% - 20px) / 2);
+        align-items: flex-end;
+    }
+    #form-usuario label:last-of-type {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:980px) {
+    #form-usuario {
+        margin: 50px auto;
+    }
+}
