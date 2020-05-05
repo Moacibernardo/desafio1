@@ -14,10 +14,6 @@
      <link rel="stylesheet" href="./css/index.css">
  </head>
 
- <body>
-
- </body>
-
  </html>
 
  <body>
