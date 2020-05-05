@@ -4,7 +4,7 @@ include('../includes/functions.php');
 
 // Valores padrões
 $nome = '';
-$email= '';
+$email = '';
 $senha = '';
 $confirmacao = '';
 
@@ -26,7 +26,7 @@ if ($_POST) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $confirmacao = $_POST['confirmacao'];
-       
+
 
     // Verificar se $_FILES está vindo
     if ($_FILES) {
@@ -50,6 +50,10 @@ if ($_POST) {
         $nomeOk = false;
     }
 
+    // Validando o email
+    if (strlen($_POST['email']) < 15) {
+        $emailOk = false;
+    }
     // Validando senha
     if (strlen($senha) < 5 || $senha != $confirmacao) {
         $senhaOk = false;
@@ -60,7 +64,7 @@ if ($_POST) {
     if ($senhaOk && $nomeOk && $emailOk) {
 
         // Salvando o usuário novo
-        addUsuario($nome,$email, $senha, $imagem);
+        addUsuario($nome, $email, $senha, $imagem);
 
         // Redirecionando usuário para a lista de usuários
         header('location: listUsuarios.php');
@@ -68,15 +72,14 @@ if ($_POST) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>Maquinas </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -84,11 +87,16 @@ if ($_POST) {
     <form id="form-usuario" method="POST" enctype="multipart/form-data">
         <label>
             Nome:
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?= $nome ?>">
+            <?= ($nomeOk ? '' : '<span class="erro">Preencha o campo com um nome válido</span>');  ?>
 
         </label>
         E-mail:
-        <input type="email" name="email" id="email" placeholder="Digite seu email">
+         <input type="email" name="endemail" id="email" placeholder="Digite seu email" value="<?= 
+$email?>">
+ <?= ($emailOk ? '' : '<span class="erro">Preencha o campo com pelo menos 15 caracteres</
+span>');  ?>
+
         </label>
         <label>
             Senha:
@@ -109,7 +117,15 @@ if ($_POST) {
             <button type="submit" class="primary">Cadastre-se aqui</button>
         </div>
     </form>
-
+    <script>
+        document.getElementById("foto").onchange = (evt) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("foto-carregada").src = e.target.result;
+            };
+            reader.readAsDataURL(evt.target.files[0]);
+        };
+    </script>
 </body>
 
 </html>
