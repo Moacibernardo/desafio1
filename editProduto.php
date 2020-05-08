@@ -32,8 +32,8 @@ rel="stylesheet">
 		<h1><?= $maquina['nome'] ?></h1>
 		<h2>R$ <?= $maquina['preco'] ?></h2>
 		<img src="<?= $maquina['img'] ?>" alt="<?= $maquina['nome'] ?>">
-		<div>Voltagem: <?= implode(", ", $maquina["voltagem"])  ?></div>
-		<button>+ Add</button>
+		<div>Descrição: <?= implode("", $maquina["descricao"])  ?></div>
+		<button> Editar</button>
 		<a href="#" class="prev">&lt;</a>
 		<a href="#" class="next">&gt;</a>
 	</main>

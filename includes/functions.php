@@ -197,3 +197,49 @@ function addUsuario($nome, $email, $senha, $imagem)
         file_put_contents('../includes/usuarios.json', $stringjson);
     }
 }
+
+
+function carregaProdutos()
+{
+    echo ('add produto executada');
+    // Ler o arquivo para uma variável string
+    $strJson = file_get_contents("../includes/produtos.json");
+
+    // transformar a string em array assoc (json_decode)
+    $produtos = json_decode($strJson, true);
+
+    // retornar o array assoc
+    return $produtos;
+}
+
+
+/**
+ * Adiciona um novo produto no arquivo produtos.json
+ */
+function addProduto($nome, $descricao, $preco, $imagem)
+{
+    //carrega produtos  usando a função anterior
+    $produtos = carregaprodutos();
+
+    //cria um array associativo $u com os dados passados por parâmetro
+    $u = [
+        'nome' => $nome, 'descricao' => $descricao, 'preco' => $preco,
+        'imagem' => $imagem
+    ];
+
+    //adiciona $u ao final do array
+    $produtos[] = $u;
+
+    //transforma o array de produtos de volta em string json
+    $stringjson = json_encode($produtos);
+
+    // Verificando se existe algum caractere na stringjson.
+    // se tiver, salva no arquivo produtos.json
+    if ($stringjson) {
+        //salva a string json no arquivo produtos.json
+        file_put_contents('../includes/produtos.json', $stringjson);
+    }
+}
+
+
+

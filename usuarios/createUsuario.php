@@ -50,10 +50,6 @@ if ($_POST) {
         $nomeOk = false;
     }
 
-    // Validando o email
-    if (strlen($_POST['email']) < 15) {
-        $emailOk = false;
-    }
     // Validando senha
     if (strlen($senha) < 5 || $senha != $confirmacao) {
         $senhaOk = false;
@@ -92,7 +88,7 @@ if ($_POST) {
 
         </label>
         E-mail:
-         <input type="email" name="endemail" id="email" placeholder="Digite seu email" value="<?= 
+         <input type="email" name="email" id="email" placeholder="Digite seu email" value="<?= 
 $email?>">
  <?= ($emailOk ? '' : '<span class="erro">Preencha o campo com pelo menos 15 caracteres</
 span>');  ?>
