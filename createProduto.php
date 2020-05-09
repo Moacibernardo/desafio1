@@ -58,11 +58,11 @@ if ($_POST) {
     // um dado endereço
     if ($nomeOk && $descricaoOk && $precoOk) {
 
-        // Salvando o usuário novo
+        // Salvando o produto
         addProduto($nome, $descricao, $preco, $imagem);
 
         // Redirecionando usuário para a lista de produtos
-        header('location: produto.php');
+        header('location: ../desafio1/produto.php');
     }
 }
 ?>

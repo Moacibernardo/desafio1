@@ -203,7 +203,7 @@ function carregaProdutos()
 {
     echo ('add produto executada');
     // Ler o arquivo para uma variável string
-    $strJson = file_get_contents("../includes/produtos.json");
+    $strJson = file_get_contents("../desafio1/includes/produtos.json");
 
     // transformar a string em array assoc (json_decode)
     $produtos = json_decode($strJson, true);
@@ -211,7 +211,6 @@ function carregaProdutos()
     // retornar o array assoc
     return $produtos;
 }
-
 
 /**
  * Adiciona um novo produto no arquivo produtos.json
@@ -221,14 +220,14 @@ function addProduto($nome, $descricao, $preco, $imagem)
     //carrega produtos  usando a função anterior
     $produtos = carregaprodutos();
 
-    //cria um array associativo $u com os dados passados por parâmetro
-    $u = [
+    //cria um array associativo $p com os dados passados por parâmetro
+    $p = [
         'nome' => $nome, 'descricao' => $descricao, 'preco' => $preco,
         'imagem' => $imagem
     ];
 
-    //adiciona $u ao final do array
-    $produtos[] = $u;
+    //adiciona $p ao final do array
+    $produtos[] = $p;
 
     //transforma o array de produtos de volta em string json
     $stringjson = json_encode($produtos);
@@ -237,7 +236,7 @@ function addProduto($nome, $descricao, $preco, $imagem)
     // se tiver, salva no arquivo produtos.json
     if ($stringjson) {
         //salva a string json no arquivo produtos.json
-        file_put_contents('../includes/produtos.json', $stringjson);
+        file_put_contents('../desafio1/includes/produtos.json', $stringjson);
     }
 }
 
