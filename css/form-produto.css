@@ -2,7 +2,7 @@
     min-width: 440px;
     margin: 0 auto;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(198, 159, 207);
     color: white;
 }
 
@@ -28,7 +28,7 @@
 }
 
 #form-produto label div {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(198, 159, 207);
     position: absolute;
     bottom: 0;
     left: 0;

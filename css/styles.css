@@ -13,7 +13,9 @@ body {
 
 .menu {
     height: 150px;
+    width: 100%;
     background-color: red;
+    margin: auto;
 }
 
 body::before {

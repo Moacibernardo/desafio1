@@ -1,12 +1,35 @@
-menu {
+.menu {
     height: 100px;
-    background-color: rgb(87, 11, 11);
+    background-color: rgba(104, 4, 82, 0);
+}
+
+.menu li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu li .ativo {
+    color: blue;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #form-busca {
     display: flex;
     width: 100%;
-    position: fixed;
     z-index: 1;
     background-color: rgba(104, 4, 82, 0);
     padding: 20px;
