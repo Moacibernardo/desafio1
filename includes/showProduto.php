@@ -75,8 +75,8 @@ $maquinas = [
 	],
 	[
 		"id" => 10,
-		"nome" => "Lavadora K",
-		"descricao" => ["Lavadora de alte pressão Karcher","110v", "220v", "Bivolt"],
+		"nome" => "Lavadora Karcher",
+		"descricao" => ["Lavadora de alta pressão Karcher","110v", "220v", "Bivolt"],
 		"preco" => 700.0,
 		"img" => "./img/Lavadora-de-Alta-Pressao-K-330.jpg",
 		"destaque" =>  true
@@ -98,3 +98,4 @@ $maquinas = [
 		"destaque" =>  true
 	]
 ];
+?>

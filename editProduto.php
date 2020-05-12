@@ -27,7 +27,7 @@ rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<link rel="stylesheet" href="css/maquina.css">
+	<link rel="stylesheet" href="css/produto.css">
 	<main>
 		<h1><?= $maquina['nome'] ?></h1>
 		<h2>R$ <?= $maquina['preco'] ?></h2>

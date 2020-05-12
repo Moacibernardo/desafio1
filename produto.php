@@ -1,43 +1,37 @@
 <?php
+// Incluir os scripts auxiliares
+include("includes/showProduto.php");
+include("includes/functions.php");
 
-// Iniciar a session
-session_start();
+// Capturar o id pedido
+$id = $_GET['id'];
 
-// Testar se tem session para esse visitante
-if (!$_SESSION) {
-
-    // Visitante não tem session.
-    // Redirecionando para página de login
-    header('location: ../login/login.php');
-}
-
-// Includes
-include('../includes/functions.php');
-
-// Carregando produtos
-$produtos = carregaProdutos();
-
-// Mostrar produtos
-
-
+// Carregar a maquina que tem esse id
+$maquina = maquinaPorId($id);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-</head>
+    <title>Produtos </title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
 <body>
-    <h1>Seja bem vind(o), <?= $_SESSION['nome'] ?></h1>
-    <?php
-    echo "<pre>";
-    print_r($produtos);
-    echo "</pre>";
-    ?>
+
+    <main>
+        <h1><?= $maquina['nome'] ?></h1>
+        <h2>R$ <?= $maquina['preco'] ?></h2>
+        <img src="<?= $maquina['img'] ?>" alt="<?= $maquina['nome'] ?>">
+        <div>Descricao: <?= implode(", ", $maquina["descricao"])  ?></div>
+        <button>+ Add</button>
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&gt;</a>
+    </main>
 </body>
 
 </html>

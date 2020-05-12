@@ -2,6 +2,16 @@
     include("includes/showProduto.php");
     include("includes/functions.php");
     // Testando se há alguma coisa no $_GE
+    // Testando se há alguma coisa no $_GET;
+    if ($_GET) {
+        // Usuário está querendo buscar algo!
+        // Capturando o trecho digitado pelo usuário
+        $trecho = $_GET['busca'];
+        // Capturar as maquinas que contém o $trecho no nome
+        $maquinas = buscaMaquina($trecho);
+    }
+
+
     ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -17,6 +27,15 @@
  </html>
 
  <body>
+     <div class="menu">
+         <div class="menuint">
+             <ul>
+                 <li><a href="./" class="ativo">Home</a></li>
+                 <li><a href="./">Produtos</a></li>
+                 <li><a href="./">Usuarios</a></li>
+             </ul>
+         </div>
+     </div>
      <form id="form-busca" method="GET">
          <input type="text" name="busca" placeholder="O que você procura?" autocomplete="off">
          <button type="submit">Buscar</button>

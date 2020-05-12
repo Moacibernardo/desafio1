@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+.menu {
+    height: 150px;
+    background-color: red;
+}
+
 body::before {
     content: "";
     position: fixed;
