@@ -11,11 +11,38 @@ body {
     margin: 0;
 }
 
+.visual {
+    background-color: rgb(59, 3, 59);
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .menu {
-    height: 150px;
-    width: 100%;
-    background-color: red;
-    margin: auto;
+    height: 100px;
+}
+
+.menu li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu li .ativo {
+    color: blue;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 body::before {

@@ -32,7 +32,7 @@
              <ul>
                  <li><a href="./indexProdutos.php" class="ativo">Home</a></li>
                  <li><a href="./createProduto.php">Produtos</a></li>
-                 <li><a href="./Usuarios/createUsuario.php">Cadastrar Usuarios</a></li>
+                 <li><a href="./Usuarios/createUsuario.php">Usuarios</a></li>
                  <li><a href="./login/login.php">login</a></li>
              </ul>
          </div>

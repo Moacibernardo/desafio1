@@ -1,7 +1,6 @@
 <?php
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
+
+
 
 // Includes
 include("../includes/functions.php");
@@ -53,18 +52,23 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/desafio1/css/style.css" rel="stylesheet">
+    <link href="/desafio1/css/login.css" rel="stylesheet">
     <title>Login</title>
 
 </head>
 
 <body>
-    <form method="post">
-        <label for="email"><input id="email" name="email" type="text" placeholder="E-mail"></label>
-        <label for="senha"><input id="senha" name="senha" type="password" placeholder="Senha"></label>
-        <?= ($loginOk ? '' : '<span class="error">Falha no login</span>'); ?>
-        <button type="submit">Entrar</button>
-    </form>
+    <div class="Visual">
+        <div class="login">
+            <form method="post">
+                <label for="email"><input id="email" name="email" type="text" placeholder="E-mail"></label>
+                <label for="senha"><input id="senha" name="senha" type="password" placeholder="Senha"></label>
+                <?= ($loginOk ? '' : '<span class="error">Falha no login</span>'); ?>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

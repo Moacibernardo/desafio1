@@ -81,6 +81,16 @@ if ($_POST) {
 </head>
 
 <body>
+    <div class="menu">
+        <div class="menuint">
+            <ul>
+                <li><a href="./indexProdutos.php" class="ativo">Home</a></li>
+                <li><a href="./createProduto.php">Produtos</a></li>
+                <li><a href="./Usuarios/createUsuario.php">Usuarios</a></li>
+                <li><a href="./login/login.php">login</a></li>
+            </ul>
+        </div>
+    </div>
     <link rel="stylesheet" href="css/form-produto.css">
     <form id="form-produto" method="POST" enctype="multipart/form-data">
         <label>

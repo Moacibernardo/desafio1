@@ -75,11 +75,21 @@ if ($_POST) {
     <title>Maquinas </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="menu">
+        <div class="menuint">
+            <ul>
+                <li><a href="../indexProdutos.php" class="ativo">Home</a></li>
+                <li><a href="../createProduto.php">Produtos</a></li>
+                <li><a href="../Usuarios/createUsuario.php">Usuarios</a></li>
+                <li><a href="../login/login.php">login</a></li>
+            </ul>
+        </div>
+    </div>
     <link rel="stylesheet" href="../css/form-usuario.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <form id="form-usuario" method="POST" enctype="multipart/form-data">
         <label>
             Nome:
@@ -88,9 +98,9 @@ if ($_POST) {
 
         </label>
         E-mail:
-         <input type="email" name="email" id="email" placeholder="Digite seu email" value="<?= 
-$email?>">
- <?= ($emailOk ? '' : '<span class="erro">Preencha o campo com pelo menos 15 caracteres</
+        <input type="email" name="email" id="email" placeholder="Digite seu email" value="<?=
+                                                                                                $email ?>">
+        <?= ($emailOk ? '' : '<span class="erro">Preencha o campo com pelo menos 15 caracteres</
 span>');  ?>
 
         </label>

@@ -9,7 +9,7 @@ main h1 {
     right: 0;
     top: 50;
     color: #FFF;
-    background-color: rgba(126, 8, 126, 0.89);
+    background-color: rgb(59, 3, 59);
     padding: 10px 20px;
     margin: 0;
 }
@@ -33,7 +33,7 @@ main img {
 
 main button {
     display: block;
-    background-color: rgba(126, 8, 126, 0.89);
+    background-color: rgb(59, 3, 59);
     border: none;
     color: white;
     padding: 10px 20px;
