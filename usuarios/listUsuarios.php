@@ -8,7 +8,7 @@ if (!$_SESSION) {
 
     // Visitante não tem session.
     // Redirecionando para página de login
-    header('location: ../login/login.php');
+    header('location: ../desafio1/login/login.php');
 }
 
 // Includes
@@ -27,9 +27,10 @@ $usuarios = carregaUsuarios();
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, in
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de usuarios</title>
 </head>
+
 <body>
     <h1>Seja bem vind(o), <?= $_SESSION['nome'] ?></h1>
     <?php
@@ -38,4 +39,5 @@ $usuarios = carregaUsuarios();
     echo "</pre>";
     ?>
 </body>
+
 </html>
